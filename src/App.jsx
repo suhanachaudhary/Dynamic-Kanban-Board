@@ -1,12 +1,11 @@
 
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import TaskForm from "./TaskForm";
 import Column from "./Column";
 import TaskCard from "./TaskCard";
 import EditForm from "./EditForm";
 import useLocalStorage from "./hooks/useLocalStorage";
 import useDragDrop from "./hooks/useDragDrop";
-import storageWrapper from "./utils/storageWrapper";
 
 export default function App() {
   const [board, setBoard] = useLocalStorage("kanban-board-v1", {
